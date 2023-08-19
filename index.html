@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    *{
+        font-family: 'Shadows Into Light', cursive;
+    }
+</style>
+<body class="bg-stone-500">
+  
+
+    <div class="">
+       <form class="flex flex-col w-1/2 mx-auto my-[100px] gap-2" action="">
+            <h1 class="text-4xl text-white font-bold mx-auto">Form login tryout App</h1>
+            <input class="username p-2 rounded-md w-2/3 mx-auto"  type="text" placeholder="Username">
+            <input class="password p-2 rounded-md w-2/3 mx-auto"  type="password" name="" id="" placeholder="Password">
+            <button class="bg-white text-sky-500  w-2/4 mx-auto p-2 rounded-md hover:bg-sky-700 hover:text-white hover:shadow-md">
+                <a href="soal.html">
+                    login
+                </a>
+            </button>
+       </form>
+    </div>
+
+
+
+<script>
+    // 1. tangkap data yang diinput user
+    const username = document.querySelector('.username')
+    const password = document.querySelector('.password')
+    const btn = document.querySelector('button')
+
+    // 2. pengkondisian dilakukan saat tombol login ditekan
+    let x = 0
+    btn.addEventListener('click', function(e){
+    e.preventDefault()
+
+     // 3. arahkan user ke soal jika benar, jika salah tolak user
+     if(username.value =="wwww"){
+        if(password.value == "imakom"){
+        alert('login kamu berhasil')
+        location.href = "soal.html"
+     }else{
+        alert('password atau username kamu salah!')
+     }
+    }else{
+        alert('password dan username kamu salah!')
+    }
+})
+</script>
+
+</body>
+</html>
